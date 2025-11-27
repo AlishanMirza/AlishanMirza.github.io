@@ -2,263 +2,1390 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Techno Globe Solutions</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Techno Globe Solutions | IT · BPO · Logistics</title>
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="./favicon.jpg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./favicon.jpg" type="image/svg+xml" />
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-   <!-- SEO Meta Tags -->
-  <meta name="description" content="Techno Globe Solutions offers top-notch IT services, BPO solutions, and efficient logistics services tailored for your business needs.">
-  <meta name="keywords" content="Techno Globe Solutions, IT Services, BPO Services, Logistics, Supply Chain Solutions, Business Solutions, Efficient Logistics, Transportation Services">
-  <meta name="author" content="Techno Globe Solutions">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Techno Globe Solutions provides IT services, BPO solutions, and logistics support to help businesses run smoother and grow steadily." />
+  <meta name="keywords"
+    content="Techno Globe Solutions, IT Services, BPO, Logistics, Business Process Outsourcing, Supply Chain" />
+  <meta name="author" content="Techno Globe Solutions" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles -->
   <style>
-    /* Additional styles */
-    .why-choose-us {
-      padding: 50px 0;
-      background-color: #f9f9f9;
-      text-align: center;
+    :root {
+      --bg-body: #050608;
+      --bg-panel: #070809;
+      --bg-card: #050608;
+      --bg-soft: #101010;
+      --gold: #d4af37;
+      --gold-soft: rgba(212, 175, 55, 0.22);
+      --gold-strong: #e5c04c;
+      --text-main: #f9fafb;
+      --text-soft: #d1d5db;
+      --text-muted: #9ca3af;
+      --border-subtle: #1f2933;
+      --radius-lg: 18px;
+      --radius-xl: 22px;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.85);
+      --shadow-card: 0 20px 55px rgba(0, 0, 0, 0.95);
+      --container-width: 1120px;
     }
 
-    .why-choose-us h2 {
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #000 0, #050608 40%, #020203 100%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    section {
+      padding: 4.5rem 0;
+    }
+
+    @media (min-width: 1024px) {
+      section {
+        padding: 5.5rem 0;
+      }
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.78rem;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: "Space Grotesk", system-ui;
       font-size: 2rem;
-      margin-bottom: 20px;
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
     }
 
-    .why-choose-us p {
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-      color: #666;
+    .section-text {
+      font-size: 0.96rem;
+      color: var(--text-soft);
+      max-width: 640px;
     }
 
-    .services {
-      padding: 50px 0;
-      text-align: center;
+    /* HEADER */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.35);
     }
 
-    .services h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .services-list {
+    .header-inner {
       display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.75rem 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: radial-gradient(circle at top, var(--gold-strong), #000);
+      display: inline-flex;
       justify-content: center;
-      gap: 20px;
+      align-items: center;
+      box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.6);
+      flex-shrink: 0;
+    }
+
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .brand-text-title {
+      font-family: "Space Grotesk", system-ui;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      color: #ffffff;
+    }
+
+    .brand-text-tagline {
+      font-size: 0.73rem;
+      color: var(--text-muted);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-soft);
+    }
+
+    .nav-links a span {
+      position: relative;
+      padding-bottom: 0.1rem;
+    }
+
+    .nav-links a span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.18rem;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), #ffffff);
+      transition: width 0.18s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .nav-links a:hover span::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      font-size: 0.8rem;
+    }
+
+    .nav-phone {
+      color: #f9fafb;
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    .nav-phone small {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* clickable number in header */
+    .nav-phone-number {
+      display: inline-block;
+      color: #f9fafb;
+      margin-top: 0.1rem;
+    }
+
+    .nav-phone-number:hover {
+      text-decoration: underline;
+    }
+
+    .btn-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.8);
+      font-size: 0.8rem;
+      background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.4), rgba(0, 0, 0, 0.9));
+      color: #ffffff;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .btn-pill:hover {
+      background: rgba(212, 175, 55, 0.9);
+      color: #000;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+    }
+
+    .btn-pill ion-icon {
+      font-size: 1rem;
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: #f9fafb;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+
+    /* Mobile nav container – hidden by default */
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      inset: 56px 0 auto 0;
+      background: #000;
+      border-bottom: 1px solid #111827;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 1);
+      padding: 0.75rem 1.25rem 1rem;
+      z-index: 900;
+    }
+
+    .nav-mobile ul {
+      list-style: none;
+      display: grid;
+      gap: 0.75rem;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-soft);
+    }
+
+    .nav-mobile a {
+      padding: 0.3rem 0;
+    }
+
+    .nav-mobile a:hover {
+      color: #ffffff;
+    }
+
+    .nav-mobile-cta {
+      margin-top: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .nav-mobile-cta .btn-pill {
+      padding-inline: 0.75rem;
+    }
+
+    @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .nav-mobile {
+        display: none;
+      }
+
+      .nav-mobile.open {
+        display: block;
+      }
+    }
+
+    /* HERO */
+    .hero {
+      padding-top: 4rem;
+      padding-bottom: 5rem;
+      position: relative;
+      overflow: hidden;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.9)),
+        url("./assets/images/s1.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.18), transparent 55%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    .hero-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-title {
+      font-family: "Space Grotesk", system-ui;
+      font-size: 2.6rem;
+      line-height: 1.05;
+      margin-bottom: 0.7rem;
+      color: #ffffff;
+    }
+
+    .hero-title span {
+      display: block;
+      color: var(--gold);
+    }
+
+    @media (min-width: 1024px) {
+      .hero-title {
+        font-size: 3rem;
+      }
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--text-soft);
+      max-width: 460px;
+      margin-bottom: 1.3rem;
+    }
+
+    .hero-badges {
+      display: flex;
       flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-soft);
     }
 
-    .service-item {
-      background-color: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 20px;
-      width: 300px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    .hero-badge {
+      border-radius: 999px;
+      border: 1px solid rgba(75, 85, 99, 0.8);
+      background: rgba(0, 0, 0, 0.7);
+      padding: 0.3rem 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
     }
 
-    .service-item h3 {
-      margin-bottom: 10px;
-      font-size: 1.5rem;
+    .hero-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--gold);
     }
 
-    .service-item p {
-      color: #666;
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .btn-primary {
+      padding: 0.75rem 1.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--gold-strong);
+      background: linear-gradient(135deg, var(--gold-strong), #fdf6e3);
+      color: #000;
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-primary:hover {
+      background: #f5d772;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .btn-ghost {
+      padding: 0.7rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      background: rgba(0, 0, 0, 0.7);
+      color: var(--text-soft);
+      font-size: 0.83rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--gold);
+      color: #ffffff;
+      background: rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .hero-meta strong {
+      color: #ffffff;
+    }
+
+    .hero-visual {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, var(--gold-soft), #020203);
+      border-radius: var(--radius-xl);
+      padding: 1.3rem 1.3rem;
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(212, 175, 55, 0.6);
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      font-size: 0.8rem;
+      color: var(--text-soft);
+    }
+
+    .hero-chip {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(212, 175, 55, 0.7);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      color: var(--gold-strong);
+    }
+
+    .hero-chip-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      font-size: 0.75rem;
+    }
+
+    .hero-metric {
+      border-radius: 14px;
+      background: rgba(0, 0, 0, 0.9);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      padding: 0.55rem 0.6rem;
+    }
+
+    .hero-metric-label {
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-metric-value {
+      font-family: "Space Grotesk", system-ui;
+      font-size: 0.98rem;
+      color: #ffffff;
+    }
+
+    .hero-metric-value span {
+      font-size: 0.7rem;
+      color: #22c55e;
+      margin-left: 0.2rem;
+    }
+
+    .hero-services-mini {
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      border-radius: 16px;
+      border: 1px dashed rgba(148, 163, 184, 0.75);
+      padding: 0.6rem 0.7rem;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      align-items: center;
+    }
+
+    .hero-services-mini span {
+      padding: 0.18rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.9);
+      border: 1px solid rgba(31, 41, 55, 0.95);
+      font-size: 0.72rem;
+    }
+
+    /* ABOUT */
+    .about {
+      background: #050608;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .about-card {
+      background: linear-gradient(135deg, #050608, #000);
+      border-radius: var(--radius-xl);
+      padding: 1.8rem 1.7rem;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-card);
+    }
+
+    .about-points {
+      list-style: none;
+      margin-top: 1.1rem;
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .about-points li {
+      display: flex;
+      gap: 0.7rem;
+      font-size: 0.92rem;
+      color: var(--text-soft);
+    }
+
+    .about-points ion-icon {
+      font-size: 1rem;
+      color: var(--gold-strong);
+      margin-top: 0.1rem;
+    }
+
+    .about-tagline {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 1.3rem;
+      border-top: 1px solid #111827;
+      padding-top: 0.85rem;
+    }
+
+    .about-image-wrap {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .about-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* SERVICES */
+    .services {
+      background: #040506;
+    }
+
+    .services-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.7rem;
+      margin-top: 1.25rem;
+    }
+
+    .service-card {
+      background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.18), #050608);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem 1.3rem;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      box-shadow: var(--shadow-soft);
+      font-size: 0.92rem;
+    }
+
+    .service-chip {
+      font-size: 0.7rem;
+      padding: 0.18rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.8);
+      color: var(--gold-strong);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-title {
+      font-family: "Space Grotesk", system-ui;
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+      color: #ffffff;
+    }
+
+    .service-text {
+      color: var(--text-soft);
+      margin-bottom: 0.7rem;
+    }
+
+    .service-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .service-bullet {
+      width: 5px;
+      height: 5px;
+      border-radius: 999px;
+      background: var(--gold-strong);
+    }
+
+    /* CONTACT */
+    .contact {
+      background: #050608;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: 2.4rem;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-panel {
+      background: #000;
+      border-radius: var(--radius-xl);
+      padding: 1.7rem 1.6rem;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-card);
+    }
+
+    .contact-panel h3 {
+      font-family: "Space Grotesk", system-ui;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-panel p {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      margin-bottom: 0.9rem;
+    }
+
+    .contact-details-list {
+      list-style: none;
+      display: grid;
+      gap: 0.8rem;
+      font-size: 0.88rem;
+      color: var(--text-soft);
+    }
+
+    .contact-details-list li {
+      display: flex;
+      gap: 0.7rem;
+    }
+
+    .contact-details-list ion-icon {
+      font-size: 1.1rem;
+      color: var(--gold-strong);
+      margin-top: 0.1rem;
+    }
+
+    .contact-details-list a {
+      color: #f9fafb;
+    }
+
+    .contact-details-list a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-form-card {
+      background: radial-gradient(circle at top left, var(--gold-soft), #020203);
+      border-radius: var(--radius-xl);
+      padding: 1.7rem 1.6rem;
+      border: 1px solid rgba(212, 175, 55, 0.7);
+      box-shadow: var(--shadow-card);
+    }
+
+    .contact-form-card h3 {
+      font-family: "Space Grotesk", system-ui;
+      font-size: 1.2rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .contact-form-card p {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      margin-bottom: 1rem;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    @media (min-width: 640px) {
+      .form-row {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      padding: 0.65rem 0.9rem;
+      font-size: 0.86rem;
+      outline: none;
+      background: rgba(0, 0, 0, 0.85);
+      color: #f9fafb;
+      font-family: inherit;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .contact-form textarea {
+      border-radius: 14px;
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #6b7280;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--gold-strong);
+      box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.5);
+      background: #000;
+    }
+
+    .contact-form .btn-primary {
+      border-radius: 999px;
+      padding-inline: 1.7rem;
+      font-size: 0.84rem;
+    }
+
+    /* FOOTER */
+    .footer {
+      border-top: 1px solid #111827;
+      padding: 2.3rem 0 1.4rem;
+      margin-top: 3rem;
+      background: #000;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 1fr));
+      gap: 2.3rem;
+      font-size: 0.84rem;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer-logo {
+      font-family: "Space Grotesk", system-ui;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.86rem;
+      color: #ffffff;
+    }
+
+    .footer-text {
+      margin-top: 0.6rem;
+      max-width: 420px;
+      color: var(--text-soft);
+    }
+
+    .footer-links-title {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    .footer-links a {
+      color: #f9fafb;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 0.6rem;
+      margin-top: 0.9rem;
+    }
+
+    .social-btn {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid #1f2937;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #f9fafb;
+      background: #000;
+      transition: all 0.18s ease;
+    }
+
+    .social-btn:hover {
+      background: var(--gold-strong);
+      border-color: var(--gold-strong);
+      color: #000;
+      transform: translateY(-1px);
+    }
+
+    .footer-bottom {
+      margin-top: 1.5rem;
+      padding-top: 0.7rem;
+      border-top: 1px solid #0b1120;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 3rem;
+      }
     }
   </style>
 </head>
 
 <body id="top">
-
   <!-- HEADER -->
-  <header class="header" data-header>
+  <header class="header">
     <div class="container">
+      <div class="header-inner">
+        <a href="#top" class="brand">
+          <div class="brand-logo">
+            <img src="./assets/images/company.jfif" alt="Techno Globe Solutions Logo" />
+          </div>
+          <div>
+            <div class="brand-text-title">Techno Globe Solutions</div>
+            <div class="brand-text-tagline">IT · BPO · Logistics</div>
+          </div>
+        </a>
 
-      <p>
-        <a href="#" class="logo">Techno Globe Solutions</a>
-        <img src="./assets/images/company.jfif" alt="Company Logo" style="height: 40px; width: auto;">
-        <a href="tel:+923192448144" class="contact-number">+92 319 2448 144</a>
-        <a href="mailto:info.technoglobesolutions@gmail.com" class="email">Hussainakarwani1999@gmail.com</a>
-      </p>
+        <nav class="nav">
+          <ul class="nav-links">
+            <li><a href="#home"><span>Home</span></a></li>
+            <li><a href="#about"><span>About</span></a></li>
+            <li><a href="#services"><span>Services</span></a></li>
+            <li><a href="#contact"><span>Contact</span></a></li>
+          </ul>
 
-      <nav class="navbar" data-navbar>
-        <div class="navbar-top">
-          <a href="#" class="logo">Techno Globe Solutions</a>
-          <button class="nav-close-btn" aria-label="Close menu" data-nav-toggler>
-            <ion-icon name="close-outline"></ion-icon>
+          <div class="nav-cta">
+            <div class="nav-phone">
+              <small>Call</small>
+              <a href="tel:+923192448144" class="nav-phone-number">+92 319 2448144</a>
+            </div>
+            <a href="https://www.linkedin.com/company/techno-globe-solutions/" class="btn-pill" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+              LinkedIn
+            </a>
+          </div>
+
+          <button class="nav-toggle" aria-label="Open menu" id="navToggle">
+            <ion-icon name="menu-outline"></ion-icon>
           </button>
-        </div>
-
-        <ul class="navbar-list">
-          <li class="navbar-item"><a href="#home" class="navbar-link" data-nav-link><span>Home</span><ion-icon name="chevron-forward"></ion-icon></a></li>
-          <li class="navbar-item"><a href="#about" class="navbar-link" data-nav-link><span>About</span><ion-icon name="chevron-forward"></ion-icon></a></li>
-          <li class="navbar-item"><a href="#services" class="navbar-link" data-nav-link><span>Services</span><ion-icon name="chevron-forward"></ion-icon></a></li>
-          <li class="navbar-item"><a href="#contact" class="navbar-link" data-nav-link><span>Contact</span><ion-icon name="chevron-forward"></ion-icon></a></li>
-        </ul>
-      </nav>
-
-      <div class="header-contact">
-        <div>
-          <p class="contact-label">Call</p>
-          <a href="tel:+923192448144" class="contact-number">+92 319 2448 144</a>
-        </div>
-        <div class="contact-icon">
-          <ion-icon name="call-outline"></ion-icon>
-        </div>
+        </nav>
       </div>
+    </div>
 
-      <button class="nav-open-btn" aria-label="Open menu" data-nav-toggler>
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
-
-      <div class="overlay" data-nav-toggler data-overlay></div>
-
+    <!-- Mobile nav -->
+    <div class="nav-mobile" id="navMobile">
+      <ul>
+        <li><a href="#home" onclick="closeNav()">Home</a></li>
+        <li><a href="#about" onclick="closeNav()">About</a></li>
+        <li><a href="#services" onclick="closeNav()">Services</a></li>
+        <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+      </ul>
+      <div class="nav-mobile-cta">
+        <span><a href="tel:+923192448144">+92 319 2448144</a></span>
+        <a href="https://www.linkedin.com/company/techno-globe-solutions/" class="btn-pill" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+          LinkedIn
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
+  <!-- MAIN -->
   <main>
-    <article>
-
-      <!-- HERO SECTION -->
-      <section class="section hero" aria-label="home" id="home" style="background-image: url('./assets/images/s1.jpg')">
-        <div class="container">
-          <div class="hero-content">
-            <h2 class="h1 hero-title">
-              <span class="span">Linking Every</span> Solution
-            </h2>
-            <p class="hero-text">
-              Delivering excellence across IT, BPO, and logistics services. Tailored solutions for every unique need in your supply chain.
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-kicker">Karachi · Global Reach</div>
+            <h1 class="hero-title">
+              Linking every <span>critical operation</span> through one trusted partner.
+            </h1>
+            <p class="hero-subtitle">
+              Techno Globe Solutions supports your IT, BPO, and logistics so you can focus on running and growing your business.
             </p>
-            <a href="#services" class="btn-outline">View Services</a>
-            <img src="./assets/images/hero-shape.png" width="116" height="116" loading="lazy" class="hero-shape shape-1" alt="Decorative shape 1">
-            <img src="./assets/images/hero-shape.png" width="116" height="116" loading="lazy" class="hero-shape shape-2" alt="Decorative shape 2">
+
+            <div class="hero-badges">
+              <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                IT, BPO & Logistics under one roof
+              </div>
+              <div class="hero-badge">
+                <ion-icon name="shield-checkmark-outline"></ion-icon>
+                Business-focused · Reliable · Secure
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#contact" class="btn-primary">
+                Book a Free Consultation
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+              <a href="#services" class="btn-ghost">
+                View Services
+                <ion-icon name="grid-outline"></ion-icon>
+              </a>
+            </div>
+
+            <div class="hero-meta">
+              <strong>CEO:</strong> Hussain Ali Karwani · Based in Karachi · Working with regional and international clients.
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-card">
+              <div class="hero-card-header">
+                <span>Operations Snapshot</span>
+                <span class="hero-chip">
+                  <span class="hero-chip-dot"></span>
+                  Live Support
+                </span>
+              </div>
+
+              <div class="hero-metrics">
+                <div class="hero-metric">
+                  <div class="hero-metric-label">IT Uptime</div>
+                  <div class="hero-metric-value">99.9%<span>target</span></div>
+                </div>
+                <div class="hero-metric">
+                  <div class="hero-metric-label">Response</div>
+                  <div class="hero-metric-value">&lt; 1 hr<span>SLA</span></div>
+                </div>
+                <div class="hero-metric">
+                  <div class="hero-metric-label">Coverage</div>
+                  <div class="hero-metric-value">24/7<span>support</span></div>
+                </div>
+              </div>
+
+              <div class="hero-services-mini">
+                We plug into your existing operations:
+                <span>Helpdesk & IT Support</span>
+                <span>Back-office & BPO</span>
+                <span>First & Last Mile Logistics</span>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ABOUT SECTION 
-      <section class="section about" id="about" aria-label="about">
-        <div class="container">
-          <figure class="about-banner img-holder" style="--width: 400; --height: 720;">
-            <img src="./assets/images/s2.webp" width="400" height="720" loading="lazy" alt="About our services" class="img-cover">
-            <img src="./assets/images/about-shape-2.png" width="500" height="500" loading="lazy" alt="Decorative shape" class="abs-img abs-img-2">
-          </figure>
-          <div class="about-content">
-            <p class="section-subtitle">Why Choose Us</p>
-            <h2 class="h2 section-title">Your Partner in IT, BPO, and Logistics Services</h2>
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="eyebrow">About</div>
+            <h2 class="section-title">Your operations partner, not just another vendor.</h2>
             <p class="section-text">
-              We provide seamless, efficient solutions tailored to meet the demands of today’s businesses. Discover the expertise and dedication that make Techno Globe Solutions a leader in the industry.
+              Techno Globe Solutions works with businesses that need dependable technology, steady back-office support,
+              and organized logistics—without managing several different providers.
             </p>
-            <ul class="about-list">
-              <li class="about-item">
-                <div class="about-icon"><ion-icon name="chevron-forward"></ion-icon></div>
-                <p class="about-text">Innovation in IT, customer-centric BPO, and cutting-edge logistics services.</p>
+
+            <ul class="about-points">
+              <li>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                <div>
+                  <strong>IT Services:</strong> Infrastructure, support, and security to keep your teams connected and protected.
+                </div>
+              </li>
+              <li>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                <div>
+                  <strong>BPO Operations:</strong> Customer care and back-office workflows aligned with how your business actually works.
+                </div>
+              </li>
+              <li>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                <div>
+                  <strong>Logistics Coordination:</strong> Planning, routing, and tracking to help keep your supply chain on time.
+                </div>
               </li>
             </ul>
-            <a href="#services" class="btn">Learn More</a>
+
+            <p class="about-tagline">
+              Led by CEO <strong>Hussain Ali Karwani</strong>, we combine practical operations experience with a clear, technology-driven approach so work moves forward reliably.
+            </p>
+          </div>
+
+          <div class="about-image-wrap">
+            <img src="./assets/images/s2.webp" alt="Techno Globe Solutions operations and teamwork" />
           </div>
         </div>
-      </section> -->
+      </div>
+    </section>
 
-      <!-- SERVICES SECTION -->
-     <section class="services" id="services">
-        <div class="container">
-          <h2>Our Services</h2>
-          <div class="services-list">
-            <div class="service-item">
-              <h3>IT Services</h3>
-              <p>Comprehensive IT solutions tailored to enhance your business efficiency and security.</p>
+    <!-- SERVICES -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="services-header">
+          <div class="eyebrow">Services</div>
+          <h2 class="section-title">Integrated services to keep your business moving.</h2>
+          <p class="section-text">
+            You can work with us for a single area, or connect IT, BPO, and logistics together under one team.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-chip">
+              <ion-icon name="laptop-outline"></ion-icon>
+              IT Services
             </div>
-            <div class="service-item">
-              <h3>BPO Services</h3>
-              <p>Streamlined business process outsourcing to improve your operational effectiveness.</p>
+            <h3 class="service-title">Modern, secure IT foundations.</h3>
+            <p class="service-text">
+              Helpdesk support, infrastructure setup, server and network management, and security hardening focused on
+              stability and safety.
+            </p>
+            <div class="service-meta">
+              <span class="service-bullet"></span>
+              Suitable for teams that want consistent performance and clear responsibilities.
             </div>
-            <div class="service-item">
-              <h3>Logistics Services</h3>
-              <p>End-to-end logistics solutions that ensure timely delivery and supply chain efficiency.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-chip">
+              <ion-icon name="people-outline"></ion-icon>
+              BPO Services
             </div>
+            <h3 class="service-title">Back-office and customer operations.</h3>
+            <p class="service-text">
+              Customer support, data processing, and routine workflows handled by a trained team that can grow as your
+              workload increases.
+            </p>
+            <div class="service-meta">
+              <span class="service-bullet"></span>
+              Helps you scale operations without adding a lot of fixed cost.
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-chip">
+              <ion-icon name="cube-outline"></ion-icon>
+              Logistics Services
+            </div>
+            <h3 class="service-title">Movement you can depend on.</h3>
+            <p class="service-text">
+              Coordination, routing, and tracking to support first mile, mid mile, and last mile logistics, with clear
+              updates along the way.
+            </p>
+            <div class="service-meta">
+              <span class="service-bullet"></span>
+              Focused on timing, reliability, and simple communication.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- LEFT: Details -->
+          <div class="contact-panel">
+            <h3>Let’s talk about your operations.</h3>
+            <p>
+              Share what you’re currently facing—IT issues, process load, or logistics challenges—and we’ll suggest
+              straightforward next steps.
+            </p>
+
+            <ul class="contact-details-list">
+              <li>
+                <ion-icon name="business-outline"></ion-icon>
+                <div>
+                  <strong>Company</strong><br />
+                  Techno Globe Solutions
+                </div>
+              </li>
+              <li>
+                <ion-icon name="person-circle-outline"></ion-icon>
+                <div>
+                  <strong>CEO</strong><br />
+                  Hussain Ali Karwani
+                </div>
+              </li>
+              <li>
+                <ion-icon name="call-outline"></ion-icon>
+                <div>
+                  <strong>Phone</strong><br />
+                  <a href="tel:+923192448144">+92 319 2448144</a>
+                </div>
+              </li>
+              <li>
+                <ion-icon name="mail-outline"></ion-icon>
+                <div>
+                  <strong>Email</strong><br />
+                  <a href="mailto:Hussainakarwani1999@gmail.com">Hussainakarwani1999@gmail.com</a>
+                </div>
+              </li>
+              <li>
+                <ion-icon name="location-outline"></ion-icon>
+                <div>
+                  <strong>Address</strong><br />
+                  House # R-20, Block 15,<br />
+                  Gulistan-e-Jauhar, Karachi 75290
+                </div>
+              </li>
+              <li>
+                <ion-icon name="logo-linkedin"></ion-icon>
+                <div>
+                  <strong>LinkedIn</strong><br />
+                  <a href="https://www.linkedin.com/company/techno-globe-solutions/" target="_blank">
+                    linkedin.com/company/techno-globe-solutions
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-form-card">
+            <h3>Send us a message</h3>
+            <p>
+              Tell us a little about your business and what you need. We’ll reply by email with follow-up questions or
+              a time for a short call.
+            </p>
+
+            <form class="contact-form" action="https://formspree.io/f/mkglwepk" method="POST">
+              <div class="form-row">
+                <div>
+                  <input type="text" name="name" placeholder="Full Name" required />
+                </div>
+                <div>
+                  <input type="email" name="email" placeholder="Work Email" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div>
+                  <input type="text" name="company" placeholder="Company (optional)" />
+                </div>
+                <div>
+                  <input type="tel" name="phone" placeholder="Phone (optional)" />
+                </div>
+              </div>
+
+              <div>
+                <textarea name="message" placeholder="What do you need help with?" required></textarea>
+              </div>
+
+              <input type="hidden" name="_subject" value="New Inquiry - Techno Globe Solutions Website" />
+              <input type="hidden" name="_next" value="/success.html" />
+              <input type="text" name="_gotcha" style="display:none" />
+
+              <button type="submit" class="btn-primary">
+                Submit Enquiry
+                <ion-icon name="send-outline"></ion-icon>
+              </button>
+            </form>
           </div>
         </div>
-      </section>
-
-    </article>
+      </div>
+    </section>
   </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-  <div class="container">
-    <div class="footer-top section">
-
-      <!-- BRAND INFO -->
-      <div class="footer-brand">
-        <a href="#" class="logo">Techno Globe Solutions</a>
-        <p class="footer-text">
-          Leading the way in IT, BPO, and Logistics. Delivering tailored solutions with precision and integrity.
-        </p>
-
-        <ul class="social-list">
-          <li>
-            <a href="#" class="social-link" aria-label="Facebook">
-              <ion-icon name="logo-facebook"></ion-icon>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Techno Globe Solutions</div>
+          <p class="footer-text">
+            One partner for technology, processes, and movement—so you can focus on the business itself instead of the
+            day-to-day problems.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/techno-globe-solutions/" class="social-btn" target="_blank"
+              aria-label="LinkedIn">
+              <ion-icon name="logo-linkedin"></ion-icon>
             </a>
-          </li>
-          <!-- Add more social links if needed -->
-        </ul>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-links-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-links-title">Contact</div>
+          <ul class="footer-links">
+            <li>House # R-20, Block 15,<br />Gulistan-e-Jauhar, Karachi 75290</li>
+            <li><a href="tel:+923192448144">+92 319 2448144</a></li>
+            <li><a href="mailto:Hussainakarwani1999@gmail.com">Hussainakarwani1999@gmail.com</a></li>
+          </ul>
+        </div>
       </div>
 
-      <!-- QUICK LINKS -->
-      <ul class="footer-list">
-        <li><p class="footer-list-title">Quick Links</p></li>
-        <li><a href="#about" class="footer-link">About</a></li>
-        <li><a href="#services" class="footer-link">Services</a></li>
-      </ul>
-
-      <!-- CONTACT US -->
-      <ul class="footer-list">
-        <li><p class="footer-list-title">Contact Us</p></li>
-
-        <li>
-          <p class="footer-link"><strong>Techno Globe Solutions</strong></p>
-        </li>
-
-        <li>
-          <p class="footer-link"><strong>CEO:</strong> Hussain Ali Karwani</p>
-        </li>
-
-        <li>
-          <a href="tel:+923192448144" class="footer-link">
-            <strong>Phone:</strong> +92 319 2448144
-          </a>
-        </li>
-
-        <li>
-          <a href="mailto:Hussainakarwani1999@gmail.com" class="footer-link">
-            <strong>Email:</strong> Hussainakarwani1999@gmail.com
-          </a>
-        </li>
-
-        <li>
-          <p class="footer-link">
-            <strong>Address:</strong> House # R-20, Block 15, Gulistan-e-Jauhar, Karachi 75290
-          </p>
-        </li>
-      </ul>
-
+      <div class="footer-bottom">
+        © <span id="year"></span> Techno Globe Solutions. All rights reserved.
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+  <!-- JS: year + mobile nav -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const navToggle = document.getElementById("navToggle");
+    const navMobile = document.getElementById("navMobile");
+
+    function closeNav() {
+      navMobile.classList.remove("open");
+      if (navToggle) {
+        navToggle.innerHTML = '<ion-icon name="menu-outline"></ion-icon>';
+      }
+    }
+
+    navToggle.addEventListener("click", () => {
+      const isOpen = navMobile.classList.toggle("open");
+      navToggle.innerHTML = isOpen
+        ? '<ion-icon name="close-outline"></ion-icon>'
+        : '<ion-icon name="menu-outline"></ion-icon>';
+    });
+
+    window.closeNav = closeNav;
+  </script>
 </body>
 
 </html>
